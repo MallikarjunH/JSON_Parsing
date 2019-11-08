@@ -13,6 +13,7 @@
 		06AD4D22237546C2001579B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06AD4D20237546C2001579B8 /* Main.storyboard */; };
 		06AD4D24237546D7001579B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06AD4D23237546D7001579B8 /* Assets.xcassets */; };
 		06AD4D27237546D7001579B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06AD4D25237546D7001579B8 /* LaunchScreen.storyboard */; };
+		06AD4D2F237549CC001579B8 /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AD4D2E237549CC001579B8 /* WebServices.swift */; };
 		CE407F85A02815A15E2B7B82 /* Pods_JSONParsing_Alamofire_SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ADDF4C4AE7B7822B3369C38 /* Pods_JSONParsing_Alamofire_SwiftyJSON.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		06AD4D23237546D7001579B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06AD4D26237546D7001579B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06AD4D28237546D7001579B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06AD4D2E237549CC001579B8 /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
 		53635741A35B3BEC236FAD2B /* Pods-JSONParsing_Alamofire+SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONParsing_Alamofire+SwiftyJSON.debug.xcconfig"; path = "Target Support Files/Pods-JSONParsing_Alamofire+SwiftyJSON/Pods-JSONParsing_Alamofire+SwiftyJSON.debug.xcconfig"; sourceTree = "<group>"; };
 		9ADDF4C4AE7B7822B3369C38 /* Pods_JSONParsing_Alamofire_SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONParsing_Alamofire_SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B87220F656D19820F7550776 /* Pods-JSONParsing_Alamofire+SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONParsing_Alamofire+SwiftyJSON.release.xcconfig"; path = "Target Support Files/Pods-JSONParsing_Alamofire+SwiftyJSON/Pods-JSONParsing_Alamofire+SwiftyJSON.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				06AD4D1A237546C1001579B8 /* AppDelegate.swift */,
 				06AD4D1C237546C1001579B8 /* SceneDelegate.swift */,
 				06AD4D1E237546C1001579B8 /* ViewController.swift */,
+				06AD4D2E237549CC001579B8 /* WebServices.swift */,
 				06AD4D20237546C2001579B8 /* Main.storyboard */,
 				06AD4D23237546D7001579B8 /* Assets.xcassets */,
 				06AD4D25237546D7001579B8 /* LaunchScreen.storyboard */,
@@ -208,6 +211,7 @@
 			files = (
 				06AD4D1F237546C1001579B8 /* ViewController.swift in Sources */,
 				06AD4D1B237546C1001579B8 /* AppDelegate.swift in Sources */,
+				06AD4D2F237549CC001579B8 /* WebServices.swift in Sources */,
 				06AD4D1D237546C1001579B8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +360,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9HVHM5PPH2;
 				INFOPLIST_FILE = "JSONParsing_Alamofire+SwiftyJSON/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +380,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9HVHM5PPH2;
 				INFOPLIST_FILE = "JSONParsing_Alamofire+SwiftyJSON/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
