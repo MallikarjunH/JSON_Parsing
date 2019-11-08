@@ -27,7 +27,6 @@ class ViewController: UIViewController {
   
       // getAPICallExample1()
        getAPICallExample2()
-        
     }
 
     
@@ -135,6 +134,32 @@ class ViewController: UIViewController {
                     print("Array is empty")
                 }
                 
+             } catch let parsingError {
+                print("Error", parsingError)
+           }
+        }
+        task.resume()
+        
+    }
+    
+    
+    func getAPICallExample3(){
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/todos") else {return}
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        guard let dataResponse = data,
+                  error == nil else {
+                  print(error?.localizedDescription ?? "Response Error")
+                  return }
+            do{
+                //here dataResponse received from a network request
+                let jsonResponse = try JSONSerialization.jsonObject(with:
+                                       dataResponse, options: [])
+                
+                print("JSON Response: \(jsonResponse)") //Response result
+                
+      
+                 
              } catch let parsingError {
                 print("Error", parsingError)
            }

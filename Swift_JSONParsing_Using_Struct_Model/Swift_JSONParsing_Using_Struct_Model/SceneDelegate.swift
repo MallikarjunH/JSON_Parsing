@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Swift_NetworkRequest_URLSession
+//  Swift_JSONParsing_Using_Struct_Model
 //
-//  Created by mallikarjun on 07/11/19.
+//  Created by mallikarjun on 08/11/19.
 //  Copyright © 2019 Mallikarjun H. All rights reserved.
 //
 
@@ -18,13 +18,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
-        
-        if #available(iOS 13.0, *) {
-            self.window?.overrideUserInterfaceStyle = .light
-        }else{
-            
-        }
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
