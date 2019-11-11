@@ -79,6 +79,35 @@ class ViewController: UIViewController {
         }
     }
     
+    func getInboxTickets(){
+        
+        let urlString = "https://www.stablehelpdesk.faveodemo.com/api/v2/helpdesk/get-tickets"
+        
+        requestGETURL(urlString, params:["token":self.refreshedTokenValue as AnyObject,"show":"inbox" as AnyObject,"api":"1" as AnyObject,"departments":"All" as AnyObject] , success: { (data) in
+                   
+            print("Inbox JSON is: \(data)")
+            
+            let msg = data["message"].stringValue
+            print("Message is: ",msg)
+            
+            if msg == "Token expired"{
+                
+               self.getLoginDetails()
+               self.getInboxTickets()
+             }
+            else if msg == "API disabled"{
+              //API option is disabled in your Helpdesk, please enable it from Admin panel.
+            }
+            else{
+                
+                
+            }
+            
+            
+        }) { (error) in
+             print(error)
+        }
+    }
     
 }
 

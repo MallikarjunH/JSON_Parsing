@@ -58,3 +58,39 @@ public func requestPOSTURL(_ strURL : String, params : [String : AnyObject]?, su
         }
     }
 }
+
+public func requestGETURL(_ strURL: String, params : [String : AnyObject]?, success:@escaping (JSON) -> Void, failure:@escaping (Error) -> Void) {
+    
+    if Connectivity.isConnectedToInternet {
+        // SVProgressHUD.show()
+        
+        Alamofire.request(strURL, method: .get, parameters: params, encoding: URLEncoding.default).responseJSON { (responseObject) -> Void in
+            
+            //  print(responseObject)
+            
+            if responseObject.result.isSuccess {
+                //    SVProgressHUD.dismiss()
+                let resJson = JSON(responseObject.result.value!)
+                success(resJson)
+            }
+            if responseObject.result.isFailure {
+                //    SVProgressHUD.dismiss()
+                let error : Error = responseObject.result.error!
+                failure(error)
+                
+            }
+        }
+    }else{
+        DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
+            let alert = UIAlertController(title: "Faveo Helpdesk", message: "Please check your internet connection", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
+            
+        }
+        
+        
+    }
+    
+}
