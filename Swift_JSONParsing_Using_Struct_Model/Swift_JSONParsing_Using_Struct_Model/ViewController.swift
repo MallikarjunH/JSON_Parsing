@@ -107,8 +107,6 @@ class ViewController: UIViewController {
                  print(courses.name,"\n", courses.description)
                  
                 
-             
-                
                }catch let jsonError{
                           
                   print("Error while Serializing JSON : \(jsonError)") // It will print an error if it get any error while serializaing the JSON
