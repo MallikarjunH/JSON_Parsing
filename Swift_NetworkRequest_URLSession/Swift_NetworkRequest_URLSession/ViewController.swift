@@ -26,7 +26,8 @@ class ViewController: UIViewController {
     @IBAction func callApiButtonClicked(_ sender: Any) {
   
       // getAPICallExample1()
-       getAPICallExample2()
+      // getAPICallExample2()
+         getAPICallExample3()
     }
 
     
@@ -156,9 +157,22 @@ class ViewController: UIViewController {
                 let jsonResponse = try JSONSerialization.jsonObject(with:
                                        dataResponse, options: [])
                 
-                print("JSON Response: \(jsonResponse)") //Response result
+             //   print("JSON Response: \(jsonResponse)") //Response result
                 
-      
+                var idArray:[Int] = []
+                var titleArray:[String] = []
+                
+                for jsonDataDict:[String:Any] in  jsonResponse as! [[String:Any]] {
+                    
+                    let idValue:Int = jsonDataDict["id"] as? Int ?? 0
+                    let titleValue:String = jsonDataDict["title"] as? String ?? "No Title"
+                    
+                    idArray.append(idValue)
+                    titleArray.append(titleValue)
+                }
+                
+                print("Id Array: \(idArray)")
+                print("Title Array: \(titleArray)")
                  
              } catch let parsingError {
                 print("Error", parsingError)
