@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cdx-oS-b59">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alamofire API Requests-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Alamofire_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRp-Dk-lXf">
+                                <rect key="frame" x="105" y="130" width="204" height="41"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="cye-jg-fUp"/>
+                                    <constraint firstAttribute="height" constant="41" id="tgu-Df-H0c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="GET API Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FyG-VB-wB4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaI-Nd-fho">
+                                <rect key="frame" x="105" y="201" width="204" height="41"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="7pz-As-Vbe"/>
+                                    <constraint firstAttribute="height" constant="41" id="x42-LY-npt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="POST API Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1o-Te-qg4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F3s-Rl-tfT">
+                                <rect key="frame" x="105" y="272" width="204" height="41"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="47M-Ud-Uwi"/>
+                                    <constraint firstAttribute="height" constant="41" id="Xfk-2Q-Scw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="PUT API Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="putAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7sR-jc-CEC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOf-rR-uF9">
+                                <rect key="frame" x="105" y="343" width="204" height="41"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="LAs-3m-ve5"/>
+                                    <constraint firstAttribute="height" constant="41" id="Z6C-4n-kgE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="DELETE API Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAPICall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gDD-cE-2g1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sRp-Dk-lXf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EPa-eZ-yn8"/>
+                            <constraint firstItem="HaI-Nd-fho" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GTR-Mu-WjX"/>
+                            <constraint firstItem="F3s-Rl-tfT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SgM-1O-vIG"/>
+                            <constraint firstItem="sRp-Dk-lXf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="ll5-qd-NHa"/>
+                            <constraint firstItem="tOf-rR-uF9" firstAttribute="top" secondItem="F3s-Rl-tfT" secondAttribute="bottom" constant="30" id="oX6-GV-4f3"/>
+                            <constraint firstItem="tOf-rR-uF9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sPy-bD-jxK"/>
+                            <constraint firstItem="F3s-Rl-tfT" firstAttribute="top" secondItem="HaI-Nd-fho" secondAttribute="bottom" constant="30" id="sbG-az-3yK"/>
+                            <constraint firstItem="HaI-Nd-fho" firstAttribute="top" secondItem="sRp-Dk-lXf" secondAttribute="bottom" constant="30" id="u8i-vj-SfU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alamofire API Requests" id="JQ1-KD-ZoD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="88.392857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="icz-NA-JdI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Cdx-oS-b59" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWi-R3-7zP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="0cG-2f-eiY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srz-qd-ngK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
